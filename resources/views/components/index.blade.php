@@ -15,7 +15,7 @@
     <h5 class="py-3 text-uppercase d-flex justify-content-center justify-content-md-start">Trending Lyrics</h5>
     <div class="row">
         @foreach($posts as $post)
-        <div class="col-md-3 d-flex justify-content-center">
+        <div class="col-md-3 d-flex justify-content-center mb-3">
 
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
