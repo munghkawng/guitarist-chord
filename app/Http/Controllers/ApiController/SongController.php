@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ApiController;
 
 use App\Http\Controllers\Controller;
+use Canvas\Events\PostViewed;
 use Illuminate\Http\Request;
 use Canvas\Models\Post;
 
@@ -17,8 +18,12 @@ class SongController extends Controller
 
     }
 
-    public function show($id){
-        $song = Post::firstWhere($id);
-        return response()->json($song);
+    public function show($slug){
+        $song = Post::with('topic')->firstWhere('slug',$slug);
+        if($song){
+            event(new PostViewed($song));
+            return response()->json($song);
+
+        }
     }
 }

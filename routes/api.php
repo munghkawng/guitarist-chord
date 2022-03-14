@@ -14,7 +14,7 @@ use App\Http\Controllers\ApiController\SongController;
 |
 */
 Route::get('/songs',[SongController::class,'index'])->name('index.song');
-Route::get('/songs/{id}',[SongController::class,'show'])->name('index.song');
+Route::get('/songs/{slug}',[SongController::class,'show']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
