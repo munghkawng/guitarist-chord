@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="row">
-        @foreach($data as $song)
+        @foreach($songs as $song)
             <div class="col-md-3 d-flex justify-content-center">
 
                 <div class="card" style="width: 18rem;">

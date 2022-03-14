@@ -14,7 +14,7 @@ class SearchController extends Controller
             return view('components.search',compact('songs'));
 
         }
-        return view('components.empty_result',compact('songs'));
+        return view('components.empty_result');
 
     }
 }
