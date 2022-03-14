@@ -9,7 +9,7 @@
                 <li class="nav-item"><a href="{{route('home')}}" class="nav-link px-2 {{Route::is('home')? 'active':''}}">Home</a></li>
                 <li class="nav-item"><a href="{{route('index.artist')}}" class="nav-link px-2 {{Route::is('index.artist')? 'active':''}}">Artist</a></li>
                 <li class="nav-item"><a href="{{route('lyrics')}}" class="nav-link px-2 {{Route::is('lyrics')? 'active':''}} ">Lyrics</a></li>
-                <li class="nav-item"><a href="https://www.youtube.com/c/dgtechmyanmar" target="_blank" class="nav-link px-2 ">Youtube</a></li>
+                <li class="nav-item"><a href="https://www.youtube.com/c/kachinsonglyrics" target="_blank" class="nav-link px-2 ">Youtube</a></li>
 
             </ul>
             <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="get" action="{{route('search')}}" >
