@@ -6,10 +6,10 @@
     <div class="px-5 mb-3 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold"><i class="bi bi-music-note"></i>Guitarist</h1>
-            <div class="col-md-8 fs-4 mb-3 ms-5">
+            <div class="col-md-8 fs-4 mb-3">
                 <cite>Sometimes you stumble across a few chords that put you in a reflective place</cite>
             </div>
-            <a href="{{route('lyrics')}}" class="btn btn-lg btn-primary ms-5">Explore Chords</a>
+            <a href="{{route('lyrics')}}" class="btn btn-lg btn-primary ">Explore Chords</a>
         </div>
     </div>
     <h5 class="py-3 text-uppercase d-flex justify-content-center justify-content-md-start">Trending Lyrics</h5>
