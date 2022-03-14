@@ -10,8 +10,11 @@ class SongController extends Controller
 {
     public function index(){
         $songs = Post::with('tags')->published()->get();
+        foreach ($songs as $song){
+            $song->body = strip_tags($song->body);
+        }
+        return response()->json($songs,200,[],JSON_UNESCAPED_UNICODE);
 
-        return response()->json($songs);
     }
 
     public function show($id){
