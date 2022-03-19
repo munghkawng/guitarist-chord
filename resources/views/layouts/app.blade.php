@@ -17,7 +17,7 @@
 
 
     {{--script--}}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/html-chords.js')}}" defer></script>
     <script src="{{asset('js/app.js')}}" defer></script>
     <script src="{{asset('js/raphael.js')}}" defer></script>

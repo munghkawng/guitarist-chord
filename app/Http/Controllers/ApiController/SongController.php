@@ -10,7 +10,7 @@ use Canvas\Models\Post;
 class SongController extends Controller
 {
     public function index(){
-        $songs = Post::with('tags')->published()->get();
+        $songs = Post::with('tags')->published()->paginate(10);
         foreach ($songs as $song){
             $song->body = strip_tags($song->body);
         }
@@ -22,6 +22,7 @@ class SongController extends Controller
         $song = Post::with('topic')->firstWhere('slug',$slug);
         if($song){
             event(new PostViewed($song));
+            $song->body= strip_tags($song->body);
             return response()->json($song);
 
         }
