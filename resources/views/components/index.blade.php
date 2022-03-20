@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Home
+    Home | Guitarist Chord
 @endsection
 @section('content')
     <div class="px-5 mb-3 bg-light rounded-3">

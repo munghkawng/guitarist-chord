@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    artists
+    Artists
 @endsection
 @section('content')
     <div class="row my-5">
