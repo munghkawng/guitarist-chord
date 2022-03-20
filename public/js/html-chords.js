@@ -1,27 +1,30 @@
-/* HTML Chords (https://github.com/ostankin/html-chords) - 02.04.2016 */
 function guitar_chord_writer() {
-	this.notes =     ["C",  "C#", "Db", "D",  "D#", "Eb", "E",  "F",  "F#", "Gb", "G",  "G#", "Ab", "A",  "A#", "B", "C#",  "Bb", "B"];
-	this.upnotes =   ["C#", "D",  "D",  "D#", "E",  "E",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "B", "B",  "Bb",  "C",  "B",  "C"];
-	this.downnotes = ["D",  "C",  "C",  "Db", "D",  "D",  "Eb", "E",  "F",  "F",  "Gb", "G",  "G",  "Bb", "Bb",  "A",  "B", "A",  "B"];
+	this.notes = ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "B", "C#", "Bb", "B"];
+	this.upnotes = ["C#", "D", "D", "D#", "E", "E", "F", "F#", "G", "G", "G#", "A", "A", "B", "B", "Bb", "C", "B", "C"];
+	this.downnotes = ["D", "C", "C", "Db", "D", "D", "Eb", "E", "F", "F", "Gb", "G", "G", "Bb", "Bb", "A", "B", "A", "B"];
 
-	this.transpositionHandler = function(oDiv, t_up) {
+
+
+
+
+	this.transpositionHandler = function (oDiv, t_up) {
 		var oSong = oDiv.parent().parent("div.song");
 		var oThis = this;
-		var oChords = oSong.find("span.chord, span.chord-inline").each(function(index) {
+		var oChords = oSong.find("span.chord, span.chord-inline").each(function (index) {
 			var chord = $(this).text();
 			var new_chord = "";
 			var i = 0;
 			var last_note_end = 0;
-			while (i<chord.length) {
+			while (i < chord.length) {
 				var found_note = "";
 				var replacement_note = "";
-				for (n=0;n<oThis.notes.length;++n) {
+				for (n = 0; n < oThis.notes.length; ++n) {
 					var note = oThis.notes[n];
 					var match = chord.substr(i, note.length) == note;
 					// find the longest match (i.e. C# rahter than C)
 					if (match && note.length > found_note.length) {
 						found_note = note;
-						replacement_note = t_up?oThis.upnotes[n]:oThis.downnotes[n];
+						replacement_note = t_up ? oThis.upnotes[n] : oThis.downnotes[n];
 					}
 				}
 				if (found_note != "") {
@@ -39,7 +42,7 @@ function guitar_chord_writer() {
 		});
 	};
 
-	this.init = function(transposition_text, up, down) {
+	this.init = function (transposition_text, up, down) {
 
 		var tclass = "transposition";
 		var cclass = "chord";
@@ -47,11 +50,11 @@ function guitar_chord_writer() {
 		var song_selector = "div.song:not(." + song_processed_class + ")";
 		var oThis = this;
 
-		$(song_selector).each(function(index){
+		$(song_selector).each(function (index) {
 			var s = $(this).html();
-			s = s.replace(/\[\s+\]/g, function(x) {
+			s = s.replace(/\[\s+\]/g, function (x) {
 				var r = "";
-				for(var i=2;i<x.length;i++)
+				for (var i = 2; i < x.length; i++)
 					r += "&nbsp; ";
 				return r;
 			});
@@ -61,17 +64,17 @@ function guitar_chord_writer() {
 			$(this).html(s);
 		});
 
-		$(song_selector + " span.chord").each(function(index){
+		$(song_selector + " span.chord").each(function (index) {
 			var s = $(this).html();
 			s = s.replace(/[ ]/g, " &nbsp; ");
 			$(this).html(s);
 		});
 
 		$("<span>" + transposition_text + ": </span>").appendTo($(song_selector + " div"));
-		$("<a>").attr("href","#").addClass(tclass).text(up).appendTo($(song_selector + " div"));
-		$("<a>").attr("href","#").addClass(tclass).text(down).appendTo($(song_selector + " div"));
-		$(song_selector + " div a." + tclass + ":contains(" + up + ")").click(function(){oThis.transpositionHandler($(this),true); return false;});
-		$(song_selector + " div a." + tclass + ":contains(" + down + ")").click(function(){oThis.transpositionHandler($(this),false); return false;});
+		$("<a>").attr("href", "#").addClass(tclass).text(up).appendTo($(song_selector + " div"));
+		$("<a>").attr("href", "#").addClass(tclass).text(down).appendTo($(song_selector + " div"));
+		$(song_selector + " div a." + tclass + ":contains(" + up + ")").click(function () { oThis.transpositionHandler($(this), true); return false; });
+		$(song_selector + " div a." + tclass + ":contains(" + down + ")").click(function () { oThis.transpositionHandler($(this), false); return false; });
 
 
 		$(song_selector).each(function () {
@@ -81,7 +84,7 @@ function guitar_chord_writer() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	var gcwriter = new guitar_chord_writer();
 	var lang = $("head script#html-chords-script").attr("lang");
