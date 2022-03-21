@@ -20,8 +20,6 @@
     <script src="{{asset('js/jquery.js')}}"></script>
     <script src="{{asset('js/html-chords.js')}}" defer></script>
     <script src="{{asset('js/app.js')}}" defer></script>
-    <script src="{{asset('js/raphael.js')}}" defer></script>
-    <script src="{{asset('js/jtab.js')}}" defer></script>
 
     <style>
         body {

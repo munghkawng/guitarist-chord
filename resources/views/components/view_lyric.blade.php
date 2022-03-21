@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h5 class="fw-bold ms-5">Chord Diagram for original key</h5>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JujH3cULH-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="jtab">{{$song->meta['canonical_link']}}</div>
         </div>
     </div>
