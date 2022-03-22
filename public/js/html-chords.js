@@ -1,7 +1,7 @@
 function guitar_chord_writer() {
-    this.notes =     ["C",  "C#", "Db", "D",  "D#", "Eb", "E",  "F",  "F#", "Gb", "G",  "G#", "Ab", "A",  "A#", "Hb", "H",  "Bb", "B"];
-    this.upnotes =   ["C#", "D",  "D",  "D#", "E",  "E",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "Hb", "H",  "H",  "C",  "H",  "H"];
-    this.downnotes = ["H",  "C",  "C",  "Db", "D",  "D",  "Eb", "E",  "F",  "F",  "Gb", "G",  "G",  "Ab", "A",  "A",  "Hb", "A",  "A"];
+    this.notes =     ["C",  "C#", "Db", "D",  "D#", "Eb", "E",  "F",  "F#", "Gb", "G",  "G#", "Ab", "A",  "A#", "Bb", "B",  "Bb", "B"];
+    this.upnotes =   ["C#", "D",  "D",  "D#", "E",  "E",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "Bb", "B",  "B",  "C",  "B",  "C"];
+    this.downnotes = ["B",  "C",  "C",  "Db", "D",  "D",  "Eb", "E",  "F",  "F",  "Gb", "G",  "G",  "Ab", "A",  "A",  "Bb", "A",  "A"];
 	this.transpositionHandler = function (oDiv, t_up) {
 		var oSong = oDiv.parent().parent("div.song");
 		var oThis = this;
