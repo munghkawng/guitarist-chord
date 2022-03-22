@@ -12,7 +12,7 @@
             <a href="{{route('lyrics')}}" class="btn btn-lg btn-primary ">Explore Chords</a>
         </div>
     </div>
-    <h5 class="py-3 text-uppercase d-flex justify-content-center justify-content-md-start">Trending Lyrics</h5>
+    <h5 class="py-3 ms-1 text-uppercase d-flex justify-content-center justify-content-md-start">Trending Lyrics</h5>
     <div class="row">
         @foreach($posts as $post)
         <div class="col-md-3 d-flex justify-content-center mb-3">
