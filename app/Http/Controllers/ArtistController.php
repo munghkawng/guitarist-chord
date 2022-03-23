@@ -16,7 +16,7 @@ class ArtistController extends Controller
     {
         $artists = Tag::with('posts')->get();
 
-        return view('components.artist',compact('artists'));
+        return view('components.artist', compact('artists'));
     }
 
     /**
@@ -48,9 +48,9 @@ class ArtistController extends Controller
      */
     public function show($slug)
     {
-        $songs = Tag::with('posts')->firstWhere('slug',$slug);
+        $songs = Tag::with('posts')->firstWhere('slug', $slug);
         //dd($songs);
-        return view('components.lyric',compact('songs'));
+        return view('components.lyric', compact('songs'));
     }
 
     /**

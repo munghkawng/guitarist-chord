@@ -13,8 +13,9 @@
                         <h6 class="card-subtitle mb-2"><i class="bi bi-mic-fill"></i> {{ $post->meta['description'] }}</h6>
 
                         <div class="d-grid">
-                            <a href="{{ route('lyric.show', $post->slug) }}" class="btn btn-outline-primary stretched-link"><i
-                                    class="bi bi-chevron-right"></i>View Lyric</a>
+                            <a href="{{ route('lyric.show', $post->slug) }}"
+                                class="btn btn-outline-primary stretched-link"><i class="bi bi-chevron-right"></i>View
+                                Lyric</a>
                         </div>
 
                     </div>

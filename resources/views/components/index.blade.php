@@ -21,7 +21,8 @@
                     <div class="card-body">
                         <h5 class="card-title mb-3 fw-bold text-uppercase text-danger"><i class="bi bi-disc"></i>
                             {{ $post->title }}</h5>
-                        <h6 class="card-subtitle mb-2"><i class="bi bi-mic-fill"></i> {{ $post->meta['description'] }}</h6>
+                        <h6 class="card-subtitle mb-2"><i class="bi bi-mic-fill"></i> {{ $post->meta['description'] }}
+                        </h6>
 
                         <div class="d-grid">
                             <a href="{{ route('lyric.show', $post->slug) }}"
