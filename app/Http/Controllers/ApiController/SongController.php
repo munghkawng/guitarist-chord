@@ -29,4 +29,14 @@ class SongController extends Controller
             return response()->json($song);
         }
     }
+
+    public function search($search)
+    {
+        $songs = Post::where('title', 'like', '%' . $search . '%')
+            ->orWhere('summary', 'like', '%' . $search . '%')->get();
+        if (count($songs)) {
+            return response()->json($songs);
+        }
+        return response()->json("Not Found");
+    }
 }

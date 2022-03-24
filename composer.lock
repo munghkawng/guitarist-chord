@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f8a68ef9f9f63273fecb55d4a4734a0",
+    "content-hash": "f57d7468593c7a854f34a590c658fa94",
     "packages": [
         {
             "name": "austintoddj/canvas",
@@ -8149,5 +8149,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }

@@ -23,6 +23,10 @@ Route::get('/songs/{slug}', [SongController::class, 'show']);
 Route::get('/artists', [ArtistController::class, 'index']);
 Route::get('/artists/{slug}', [ArtistController::class, 'showArtistSongs']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+// Search 
+Route::get('/search/{search}', [SongController::class, 'search']);
+
+// protected route
+Route::group(['middleware' => ['auth:sanctum']], function () {
 });
