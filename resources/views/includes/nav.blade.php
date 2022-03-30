@@ -13,10 +13,16 @@
                         class="nav-link px-2 {{ Route::is('index.artist') ? 'active' : '' }}">Artist</a></li>
                 <li class="nav-item"><a href="{{ route('lyrics') }}"
                         class="nav-link px-2 {{ Route::is('lyrics') ? 'active' : '' }} ">Lyrics</a></li>
-                <li class="nav-item"><a href="https://www.youtube.com/c/kachinsonglyrics" target="_blank"
-                        class="nav-link px-2 ">Youtube</a></li>
+
+
 
             </ul>
+            <div class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 me-lg-5 justify-content-center">
+                <div class="g-ytsubscribe" data-channelID="UCC1dSgcWeBU6wXrrhWfDzTA" data-layout="default"
+                    data-count="default"></div>
+            </div>
+            {{-- <div class="g-ytsubscribe" data-channelID="UCC1dSgcWeBU6wXrrhWfDzTA" data-layout="default"
+                data-count="default"></div> --}}
             <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="get" action="{{ route('search') }}">
                 <input class="form-control" type="search" name="q" placeholder="song or artist name" id="search"
                     autocomplete="off">

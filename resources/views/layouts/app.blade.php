@@ -40,6 +40,7 @@
     @include('includes.footer')
 
 
+    <script src="https://apis.google.com/js/platform.js"></script>
 
 </body>
 
