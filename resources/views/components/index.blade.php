@@ -17,7 +17,7 @@
         @foreach ($posts as $post)
             <div class="col-md-3 d-flex justify-content-center mb-3">
 
-                <div class="card shadow-lg " style="width: 18rem;">
+                <div class="card shadow-lg pb-3" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title mb-3 fw-bold text-uppercase text-danger"><i class="bi bi-disc"></i>
                             {{ $post->title }}</h5>
