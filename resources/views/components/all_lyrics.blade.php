@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    All lyrics
+    All lyric
 @endsection
 @section('content')
     <div class="row">
