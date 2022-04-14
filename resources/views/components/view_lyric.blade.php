@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    {{ $song->title }} - Guitarist Chord
+    {{ $song->title }}
 @endsection
 @section('content')
     <div class="row">
