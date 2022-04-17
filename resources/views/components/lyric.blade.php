@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    All Lyrics
+    {{$songs->name}}
 @endsection
 
 

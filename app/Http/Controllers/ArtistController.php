@@ -49,7 +49,7 @@ class ArtistController extends Controller
     public function show($slug)
     {
         $songs = Tag::with('posts')->firstWhere('slug', $slug);
-        //dd($songs);
+        
         return view('components.lyric', compact('songs'));
     }
 

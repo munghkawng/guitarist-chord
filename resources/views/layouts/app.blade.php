@@ -2,10 +2,12 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+     <title>@yield('title')</title>
+    <meta name="description" content="song lyric and guitar chord finder">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
-    <title>@yield('title')</title>
+   
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +20,7 @@
 
 
     {{-- script --}}
+
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/html-chords.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -41,6 +44,7 @@
 
 
     <script src="https://apis.google.com/js/platform.js"></script>
+    
 
 </body>
 

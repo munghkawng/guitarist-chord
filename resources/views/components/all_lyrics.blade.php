@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <div class="row">
+
         @foreach ($posts as $post)
             <div class="col-md-3 d-flex justify-content-center mb-3">
 
@@ -23,5 +24,7 @@
 
             </div>
         @endforeach
+
+
     </div>
 @endsection
