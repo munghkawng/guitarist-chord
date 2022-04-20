@@ -27,9 +27,10 @@ class PostController extends Controller
     public function show($slug)
     {
         $song = Post::with('topic')->firstWhere('slug', $slug);
+        $randomSong = Post::with('tags')->inRandomOrder()->where('slug','!=',$slug)->paginate(14);
         if ($song) {
             event(new PostViewed($song));
-            return view('components.view_lyric', compact('song'));
+            return view('components.view_lyric', compact('song','randomSong'));
         }
     }
 }
