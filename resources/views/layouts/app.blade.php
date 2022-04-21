@@ -2,12 +2,12 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-     <title>@yield('title')</title>
+    <title>@yield('title')</title>
     <meta name="description" content="Find Myanmar Song Lyric with Guitar Chords">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
-   
+
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/html-chords.css') }}" />
     <script src="https://kit.fontawesome.com/80dad50357.js" crossorigin="anonymous"></script>
-    
 
 
-   
+
+
 
     {{-- script --}}
 
@@ -33,7 +33,6 @@
         body {
             font-family: 'Roboto Mono', monospace;
         }
-
     </style>
 </head>
 
@@ -48,9 +47,9 @@
 
 
     <script src="https://apis.google.com/js/platform.js"></script>
-    
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script src="{{ asset('js/share.js') }}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/share.js') }}"></script>
 </body>
 
 </html>
