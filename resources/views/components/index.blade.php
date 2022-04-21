@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('title')
-   Guitarist Chord
+   Guitarist Chord | Myanmar Song Lyrics & Guitar Chords
 @endsection
 @section('content')
     <div class="px-5 mb-3 bg-light rounded-3">
+        
         <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold"><i class="bi bi-music-note"></i>GuitaristChord</h1>
+            <h1 class="display-5 fw-bold"><i class="fa-solid fa-guitar"></i>GuitaristChord</h1>
             <div class="col-md-8 fs-4 mb-3">
                 <cite>Sometimes you stumble across a few chords that put you in a reflective place</cite>
             </div>
@@ -22,28 +23,13 @@
       <h5 class="mb-1">{{$post->title}}</h5>
      
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
+    <p class="mb-1">{{Str::words("$post->summary",7,'...')}}</p>
     <small>{{$post->meta['description']}}</small>
   </a>
   
 </div>
 
-                {{-- <div class="card shadow-lg pb-3" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3 fw-bold text-uppercase text-danger"><i class="bi bi-disc"></i>
-                            {{ $post->title }}</h5>
-                        <h6 class="card-subtitle mb-2"><i class="bi bi-mic-fill"></i> {{ $post->meta['description'] }}
-                        </h6>
-
-                        <div class="d-grid">
-                            <a href="{{ route('lyric.show', $post->slug) }}"
-                                class="btn btn-outline-primary stretched-link"><i class="bi bi-chevron-right"></i> View
-                                Lyric</a>
-                        </div>
-
-                    </div>
-                </div> --}}
-
+                
             </div>
         @endforeach
        

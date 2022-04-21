@@ -1,12 +1,16 @@
 @extends('layouts.app')
 @section('title')
-    {{ $song->title }}
+    {{ $song->title }} By {{$song->meta['description']}} @guitaristchord.com
 @endsection
 @section('content')
     <div class="row">
         <div class="col-12 col-md-8">
-            <h4 class="fw-bold"><i class="bi bi-disc-fill"></i> {{ $song->title }}</h4>
-            <p><i class="bi bi-mic-fill"></i> Artist:<span class="fw-bold">{{ $song->meta['description'] }}</span></p>
+             @foreach($socialShareButtons as $social=>$value)
+             <a href="{{$value}}" class="btn btn-outline-primary btn-sm mb-2" target="_blank"><i class="fa-brands fa-{{$social}}"></i></a>
+             @endforeach
+
+            <h4 class="fw-bold">{{ $song->title }}</h4>
+            <p><i class="fa-solid fa-guitar"></i> Artist:<span class="fw-bold">{{ $song->meta['description'] }}</span></p>
 
             <div class="song">
 
@@ -25,7 +29,7 @@
             <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Song : {{$suggestedSong->title}}</h5>
             </div>
-        <p class="mb-1">Artist <span class="bi bi-play-fill"></span> {{$suggestedSong->meta['description']}}</p>
+        <p class="mb-1">Artist <i class="fa-solid fa-guitar"></i> {{$suggestedSong->meta['description']}}</p>
     
         </a>   
         

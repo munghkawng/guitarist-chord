@@ -32,3 +32,6 @@ Route::get('/artists/{slug}',[ArtistController::class,'show'])->name('show.song'
 
 Route::get('/autocomplete-search',[SearchController::class,'autocompleteSearch']);
 Route::get('/search',[SearchController::class,'search'])->name('search');
+
+
+

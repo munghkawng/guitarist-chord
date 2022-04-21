@@ -9,6 +9,7 @@
         "austintoddj/canvas": "^6.0",
         "barryvdh/laravel-debugbar": "^3.6",
         "guzzlehttp/guzzle": "^7.2",
+        "jorenvanhocht/laravel-share": "^4.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Artists
+    Artists @ guitaristchord.com
 @endsection
 @section('content')
     <div class="row my-5">
