@@ -15,6 +15,8 @@ class SongController extends Controller
         $songs = Post::with('tags')->published()->paginate(10);
         foreach ($songs as $song) {
             $song->body = strip_tags($song->body);
+            $song->body = html_entity_decode($song->body);
+
         }
         return response()->json($songs, 200, [], JSON_UNESCAPED_UNICODE);
     }
@@ -26,6 +28,8 @@ class SongController extends Controller
         if ($song) {
             event(new PostViewed($song));
             $song->body = strip_tags($song->body);
+            $song->body = html_entity_decode($song->body);
+
             return response()->json($song);
         }
     }

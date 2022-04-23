@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\LyricSubmitController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,5 +35,5 @@ Route::get('/artists/{slug}',[ArtistController::class,'show'])->name('show.song'
 Route::get('/autocomplete-search',[SearchController::class,'autocompleteSearch']);
 Route::get('/search',[SearchController::class,'search'])->name('search');
 
-
-
+// submit song lyric
+Route::get('/submit-song-lyric',[LyricSubmitController::class,'index'])->name('lyric.submit');
