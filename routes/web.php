@@ -37,3 +37,5 @@ Route::get('/search',[SearchController::class,'search'])->name('search');
 
 // submit song lyric
 Route::get('/submit-song-lyric',[LyricSubmitController::class,'index'])->name('lyric.submit');
+Route::post('/submit-song-lyrics',[LyricSubmitController::class,'storeFormSubmit'])->name('form.store');
+Route::get('/thankyou',[LyricSubmitController::class,'thankyou'])->name('show.thank');
