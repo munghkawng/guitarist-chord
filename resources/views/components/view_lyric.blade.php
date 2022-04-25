@@ -6,6 +6,7 @@
 @section('content')
 <div class="row">
     <div class="col-12 col-md-8">
+        <a href="mailto:?subject={{$song->title}} - {{$song->meta['description']}}" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-envelope"></i></a>
         @foreach($socialShareButtons as $social=>$value)
         <a href="{{$value}}" class="btn btn-outline-primary btn-sm mb-2" target="_blank"><i class="fa-brands fa-{{$social}}"></i></a>
         @endforeach

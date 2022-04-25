@@ -19,7 +19,7 @@
                 data-count="default"></div> --}}
             <form class="d-flex col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="get" action="{{ route('search') }}">
                 <input class="form-control" type="search" name="q" placeholder="song or artist name" id="search" autocomplete="off">
-                <button class="btn btn-outline-info ms-2" type="submit">Search</button>
+                <button class="btn btn-outline-info ms-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
 
         </div>

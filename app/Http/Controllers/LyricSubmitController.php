@@ -14,13 +14,7 @@ class LyricSubmitController extends Controller
 
 
     public function storeFormSubmit(Request $request){
-      // $request->validate([
-      //   'songTitle'=>'required',
-      //   'artistName'=>'required',
-      //   'lyrics'=>'required',
-      //   'uploaderName'=>'required',
-      //   'uploaderEmail'=>'required'
-      // ]);
+
 
       \Mail::send('components.mail',array(
         'songTitle'=>$request->songTitle,
@@ -43,7 +37,7 @@ class LyricSubmitController extends Controller
       if(session('success')){
         return view('components.thankyou');
       }else {
-        return redirect('/');
+        return abort(404,'Page Not Found');
       }
 
     }

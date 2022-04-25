@@ -39,3 +39,7 @@ Route::get('/search',[SearchController::class,'search'])->name('search');
 Route::get('/submit-song-lyric',[LyricSubmitController::class,'index'])->name('lyric.submit');
 Route::post('/submit-song-lyrics',[LyricSubmitController::class,'storeFormSubmit'])->name('form.store');
 Route::get('/thankyou',[LyricSubmitController::class,'thankyou'])->name('show.thank');
+
+Route::get('/test',function(){
+  return "<h1>Hello World</h1>";
+});
