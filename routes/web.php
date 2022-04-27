@@ -40,6 +40,7 @@ Route::get('/submit-song-lyric',[LyricSubmitController::class,'index'])->name('l
 Route::post('/submit-song-lyrics',[LyricSubmitController::class,'storeFormSubmit'])->name('form.store');
 Route::get('/thankyou',[LyricSubmitController::class,'thankyou'])->name('show.thank');
 
-Route::get('/test',function(){
-  return "<h1>Hello World</h1>";
+// sitemap
+Route::get("sitemap.xml" , function () {
+    return \Illuminate\Support\Facades\Redirect::to('sitemap.xml');
 });

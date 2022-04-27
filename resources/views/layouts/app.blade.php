@@ -3,7 +3,7 @@
 
 <head>
     <title>@yield('title')</title>
-    <meta name="description" content="Find Myanmar Song Lyric with Guitar Chords">
+    <meta name="description" content="Guitaristchord is a place for finding myanmar song lyrics with guitar chords">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
