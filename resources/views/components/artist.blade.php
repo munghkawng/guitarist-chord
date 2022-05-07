@@ -1,7 +1,13 @@
 @extends('layouts.app')
+@section('keywords')
+Myanmar Song Lyric | Kachin Song Lyrics
+    @foreach($artists as $artist)
+        <span>{{$artist->name}}</span>
+    @endforeach
+@endsection
+
 @section('title')
-Artists
-@ guitaristchord.com
+Artists @ guitaristchord.com
 @endsection
 @section('content')
 <div class="row my-5">
@@ -10,7 +16,7 @@ Artists
         <a href="{{ route('show.song', $artist->slug) }}" class="text-decoration-none">
             <div class="card shadow" style="width: 17rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-uppercase text-primary"><i class="bi bi-disc-fill text-black"></i>
+                    <h5 class="card-title  text-primary"><i class="bi bi-disc-fill text-black"></i>
                         {{ $artist->name }}
                     </h5>
                 </div>

@@ -16,6 +16,7 @@ class ArtistController extends Controller
     {
         $artists = Tag::with('posts')->get();
 
+
         return view('components.artist', compact('artists'));
     }
 
@@ -49,7 +50,7 @@ class ArtistController extends Controller
     public function show($slug)
     {
         $songs = Tag::with('posts')->firstWhere('slug', $slug);
-        
+
         return view('components.lyric', compact('songs'));
     }
 

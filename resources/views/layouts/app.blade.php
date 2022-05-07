@@ -2,10 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>@yield('title')</title>
-    <meta name="description" content="Guitaristchord is a place for finding myanmar song lyrics with guitar chords">
     <meta charset="utf-8">
+    <!-- Primary Meta Tags -->
+
+    <meta name="title" content="Guitarist Chord | Official Myanmar Song Lyrics & Guitar Chords">
+    <meta name="description" content="Guitaristchord is a place for finding myanmar song lyrics with guitar chords">
+    <meta name="keywords" content="@yield('keywords')">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@yield('title') | guitarist chord</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
 
     {{-- font --}}

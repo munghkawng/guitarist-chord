@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('keywords')
+    Myanmar Song Lyric | Kachin Song Lyrics
+    {{$songs->name}}
+@endsection
+
 @section('title')
     {{$songs->name}}
 @endsection

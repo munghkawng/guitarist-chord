@@ -1,4 +1,11 @@
 @extends('layouts.app')
+@section('keywords')
+    Myanmar Song Lyric | Kachin Song Lyrics
+    @foreach($posts as $post)
+        {{$post->title}}
+    @endforeach
+@endsection
+
 @section('title')
 All lyric
 @endsection

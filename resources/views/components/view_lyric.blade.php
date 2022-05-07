@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('keywords')
+    {{$song->title}} | {{$song->meta['description']}} Myanmar Song Lyric | Kachin Song Lyrics
+@endsection
+@section('author')
+    {{$song->title}} | {{$song->meta['description']}} @guitaristchord.com
+@endsection
 @section('title')
 {{ $song->title }} By {{$song->meta['description']}}
 @guitaristchord.com

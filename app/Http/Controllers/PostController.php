@@ -40,4 +40,6 @@ class PostController extends Controller
             return view('components.view_lyric', compact('song', 'randomSong', 'socialShareButtons'));
         }
     }
+
+
 }

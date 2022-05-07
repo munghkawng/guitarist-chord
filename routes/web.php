@@ -5,6 +5,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LyricSubmitController;
+use App\Http\Controllers\SitemapXmlController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +24,13 @@ use App\Http\Controllers\LyricSubmitController;
 //});
 
 Route::get('/',[PostController::class,'index'])->name('home');
-Route::get('/lyrics',[PostController::class,'show_all_lyrics'])->name('lyrics');
+Route::get('/myanmar-songs',[PostController::class,'show_all_lyrics'])->name('lyrics');
 
-Route::get('/lyrics/{slug}',[PostController::class,'show'])->name('lyric.show');
+Route::get('/{slug}/myanmar-song',[PostController::class,'show'])->name('lyric.show');
 
 /* Artist Route*/
 Route::get('/artists',[ArtistController::class,'index'])->name('index.artist');
-Route::get('/artists/{slug}',[ArtistController::class,'show'])->name('show.song');
+Route::get('/{slug}/artists',[ArtistController::class,'show'])->name('show.song');
 
 //Search route
 
@@ -41,6 +43,4 @@ Route::post('/submit-song-lyrics',[LyricSubmitController::class,'storeFormSubmit
 Route::get('/thankyou',[LyricSubmitController::class,'thankyou'])->name('show.thank');
 
 // sitemap
-Route::get("sitemap.xml" , function () {
-    return \Illuminate\Support\Facades\Redirect::to('sitemap.xml');
-});
+Route::get('/sitemap.xml',[SitemapXmlController::class,'index']);
