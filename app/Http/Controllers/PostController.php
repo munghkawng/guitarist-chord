@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Canvas\Events\PostViewed;
-use Canvas\Models\Tag;
+
 use Illuminate\Http\Request;
 use Canvas\Models\Post;
+
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('tags')->published()->paginate(4);
+        $posts = Post::with('tags')->published()->paginate(16);
 
         return view('components.index', compact('posts'));
     }
@@ -24,16 +25,17 @@ class PostController extends Controller
 
     public function show($slug)
     {
-        $song = Post::with('topic')->firstWhere('slug', $slug);
+        $song = Post::with('tags', 'topic')->firstWhere('slug', $slug);
+
 
         $socialShareButtons = \Share::page(url()->current(), $slug)
-                            ->facebook()
-                            ->twitter()
-                            ->reddit()
-                            ->telegram()
-                            ->whatsapp()
-                            ->getRawLinks();
-        $randomSong = Post::with('tags')->inRandomOrder()->where('slug', '!=', $slug)->paginate(14);
+            ->facebook()
+            ->twitter()
+            ->reddit()
+            ->telegram()
+            ->whatsapp()
+            ->getRawLinks();
+        $randomSong = Post::with('tags')->inRandomOrder()->where('slug', '!=', $slug)->get();
 //         dd($socialShareButtons);
         if ($song) {
             event(new PostViewed($song));

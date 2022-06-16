@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
-class LyricSubmitController extends Controller
+class ContactController extends Controller
 {
 
-    // lyric submit form
+    // Contact form
     public function index(){
-      return view('components.lyric_submit_form');
+      return view('components.contact');
     }
 
 
@@ -17,17 +17,16 @@ class LyricSubmitController extends Controller
 
 
       \Mail::send('components.mail',array(
-        'songTitle'=>$request->songTitle,
-        'artistName'=>$request->artistName,
-        'lyrics'=>$request->lyrics,
-        'uploaderName'=>$request->uploaderName,
+        'fullName'=>$request->fullName,
+        'subject'=>$request->subject,
+        'messages'=>$request->message,
         'uploaderEmail'=>$request->uploaderEmail,
       ),function($message) use($request){
         $message->from($request->uploaderEmail);
-        $message->to('mung@guitaristchord.com','admin')->subject($request->songTitle);
+        $message->to('mung@guitaristchord.com','admin')->subject($request->fullName);
 
       });
-      return redirect()->route('show.thank')->with('success','We have received your request and would like to thank you for submitting to us ');
+      return redirect()->route('show.thank')->with('success','We have received your message and would like to thank you for reaching out to us ');
 
 
 
