@@ -21,11 +21,10 @@ use App\Http\Controllers\SitemapXmlController;
 */
 
 
-Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/', [PostController::class,'index'])->name('home');
 
 
 Route::get('/myanmar-songs', [PostController::class, 'show_all_lyrics'])->name('lyrics');
-
 Route::get('/{slug}/myanmar-song', [PostController::class, 'show'])->name('lyric.show');
 
 /* Artist Route*/
@@ -33,7 +32,6 @@ Route::get('/artists', [ArtistController::class, 'index'])->name('index.artist')
 Route::get('/{slug}/artists', [ArtistController::class, 'show'])->name('show.song');
 
 //Search route
-
 Route::get('/autocomplete-search', [SearchController::class, 'autocompleteSearch']);
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 

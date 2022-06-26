@@ -1,11 +1,13 @@
 @extends('layouts.app')
-@section('keywords')
-    Myanmar Song Lyric | Kachin Song Lyrics
-    {{$songs->name}}
+@section('meta-description')
+    {{ $songs->name }} Song List
+    @foreach ($songs->posts as $key => $song)
+        {{ $song->title }},
+    @endforeach
 @endsection
 
 @section('title')
-    {{$songs->name}}
+    List of Songs By {{ $songs->name }}
 @endsection
 
 

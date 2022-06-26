@@ -12,9 +12,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('tags')->published()->paginate(16);
+        // $posts = Post::with('tags')->published()->paginate(16);
 
-        return view('components.index', compact('posts'));
+        return view('components.index');
     }
 
     public function show_all_lyrics()
@@ -27,7 +27,7 @@ class PostController extends Controller
     {
         $song = Post::with('tags', 'topic')->firstWhere('slug', $slug);
 
-
+        
         $socialShareButtons = \Share::page(url()->current(), $slug)
             ->facebook()
             ->twitter()

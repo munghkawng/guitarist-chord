@@ -15,7 +15,7 @@
             </form>
             <ul class="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li class="nav-item"><a href="{{ route('index.artist') }}"
-                        class="nav-link px-2 {{ Route::is('index.artist') ? 'active' : '' }}">Artists</a></li>
+                        class="nav-link px-2 {{ Route::is('index.artist') ? 'active' : '' }}">ARTISTS</a></li>
 
 
             </ul>

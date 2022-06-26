@@ -12,7 +12,7 @@
     <ul class="nav col-md-4 justify-content-end">
         <a href="{{ route('about') }}" class="nav-link px-2 text-info">About</a>
 
-        <a href="{{ route('privacy') }}" class="nav-link px-2 text-info">Privacy Policy</a>
+        <a href="{{ route('privacy') }}" class="nav-link px-2 text-info">Privacy</a>
         <a href="{{ route('disclaminer') }}" class="nav-link px-2 text-info">Disclaimer</a>
         <a href="{{ route('contact.submit') }}" class="nav-link px-2 text-info">Contact Us</a></li>
 

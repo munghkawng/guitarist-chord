@@ -4,14 +4,29 @@
 <head>
     <meta charset="utf-8">
     <!-- Primary Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="Guitarist Chord | Official Myanmar Song Lyrics & Guitar Chords">
-    <meta name="description" content="Guitaristchord is a place for finding myanmar song lyrics with guitar chords">
-    <meta name="keywords" content="@yield('keywords')">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="@yield('meta-description')">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
+
+    <title>@yield('title') | Guitaristchord.com</title>
+
+    <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
+    @livewireStyles
+    {{-- favicon link --}}
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/apple-touch-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/apple-touch-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-touch-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img/apple-touch-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img/apple-touch-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img/apple-touch-icon-152x152.png') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon-180x180.png') }}" />
 
 
-    <title>@yield('title') | Guitarist Chord Myanmar</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
+    {{-- canonical link --}}
+    <link rel="canonical" href="@yield('canonical-link')" />
 
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,16 +43,18 @@
 
 
     {{-- script --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/html-chords.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <style>
-        body {
-            font-family: 'Roboto Mono', monospace;
-        }
-    </style>
+
 </head>
+<style>
+    body {
+        font-family: 'Jetbrains Mono';
+    }
+</style>
 
 <body>
 
@@ -53,7 +70,8 @@
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/share.js') }}"></script>
 
-    @stack('loadMore-script')
+    @livewireScripts
+
 </body>
 
 </html>
