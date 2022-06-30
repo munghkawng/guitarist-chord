@@ -23,7 +23,7 @@ use App\Http\Controllers\SitemapXmlController;
 
 Route::get('/', [PostController::class,'index'])->name('home');
 
-
+// index Route
 Route::get('/myanmar-songs', [PostController::class, 'show_all_lyrics'])->name('lyrics');
 Route::get('/{slug}/myanmar-song', [PostController::class, 'show'])->name('lyric.show');
 

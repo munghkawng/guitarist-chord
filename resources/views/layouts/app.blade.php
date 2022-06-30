@@ -2,12 +2,14 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta charset="utf-8">
     <!-- Primary Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="@yield('meta-description')">
     <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>@yield('title') | Guitaristchord.com</title>
 
     <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
@@ -47,7 +49,7 @@
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/html-chords.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    {!! htmlScriptTagJsApi() !!}
 
 </head>
 <style>
@@ -71,6 +73,7 @@
     <script src="{{ asset('js/share.js') }}"></script>
 
     @livewireScripts
+    @stack('child-scripts')
 
 </body>
 

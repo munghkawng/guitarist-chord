@@ -179,7 +179,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\CanvasServiceProvider::class,
-
+       
     ],
 
     /*
@@ -195,6 +195,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Share' => Jorenvh\Share\ShareFacade::class,
+        
 
     ])->toArray(),
 

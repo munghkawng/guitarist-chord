@@ -15,32 +15,22 @@
                 <a href="{{ $value }}" class="btn btn-outline-primary btn-sm mb-2" target="_blank"><i
                         class="fa-brands fa-{{ $social }}"></i></a>
             @endforeach
-            <div class="card mb-3 bg-light" style="max-width: 540px;">
-                <div class="row g-0">
-                    @if ($song->featured_image)
-                        <div class="col-md-4">
-                            <img src="{{ asset($song->featured_image) }}" class="img-fluid rounded-circle"
-                                alt="{{ $song->summary }}">
-                        </div>
-                    @endif
-                    <div class="col-md-8">
-                        <div class="card-body ">
-                            <h4 class="card-title text-info">{{ $song->title }}</h4>
-                            <p>Artist:<a
-                                    href="{{ route('show.song', $song->tags[0]->slug) }}">{{ $song->summary }}</a></p>
-                        </div>
+
+            <h3 class="fw-bold mb-3">{{ $song->title }}</h4>
+                <div class="mb-3">
+                    <a href="{{ route('show.song', $song->tags[0]->slug) }}" class="bg-black p-2 text-white">
+                        {{ $song->summary }}</a>
+                </div>
+
+
+                <div class="song">
+
+                    <div class="transposition">
+
                     </div>
-                </div>
-            </div>
-
-            <div class="song">
-
-                <div class="transposition">
+                    {!! $song->body !!}
 
                 </div>
-                {!! $song->body !!}
-
-            </div>
         </div>
         <div class="col-md-4">
             <p class="lead text-center text-info text-uppercase">Related Songs</p>

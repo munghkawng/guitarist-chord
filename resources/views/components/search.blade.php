@@ -9,10 +9,10 @@
 
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title mb-3"><i class="bi bi-disc"></i> <i class="fa-solid fa-music"></i>
+                        <h5 class="card-title mb-3 fw-bold"><i class="bi bi-disc"></i> <i class="fa-solid fa-music"></i>
                             {{ $song->title }}</h5>
                         <h6 class="card-subtitle mb-2"><i class="bi bi-mic-fill"></i><i class="fa-solid fa-microphone"></i>
-                            {{ $song->meta['description'] }}</h6>
+                            {{ $song->summary }}</h6>
 
                         <div class="d-grid">
                             <a href="{{ route('lyric.show', $song->slug) }}"
