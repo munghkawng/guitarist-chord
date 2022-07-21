@@ -7,14 +7,15 @@
     <meta charset="utf-8">
     <!-- Primary Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta name="description" content="@yield('meta-description')">
-    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <title>@yield('title') | Guitaristchord.com</title>
 
     <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
     @livewireStyles
     {{-- favicon link --}}
+    <link rel=“icon” href="{{ asset('img/favicon.ico') }}" type=“image/x-icon”>
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/apple-touch-icon-57x57.png') }}" />
@@ -40,20 +41,23 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/html-chords.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/customstyle.css') }}" />
-
+    {{-- fontawesome js --}}
     <script src="https://kit.fontawesome.com/80dad50357.js" crossorigin="anonymous"></script>
 
 
     {{-- script --}}
+    {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
+    {{-- guitar chordjs --}}
     <script src="{{ asset('js/html-chords.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    {!! htmlScriptTagJsApi() !!}
+
 
 </head>
 <style>
     body {
+
         font-family: 'Jetbrains Mono';
     }
 </style>
