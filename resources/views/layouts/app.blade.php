@@ -3,13 +3,12 @@
 
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <meta charset="utf-8">
     <!-- Primary Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="description" content="@yield('meta-description')">
-
+    <meta name="robots" content="index,follow">
     <title>@yield('title') | Guitaristchord.com</title>
 
     <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
@@ -28,8 +27,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon-180x180.png') }}" />
 
 
-    {{-- canonical link --}}
-    <link rel="canonical" href="@yield('canonical-link')" />
+
 
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +39,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/html-chords.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/customstyle.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
     {{-- fontawesome js --}}
     <script src="https://kit.fontawesome.com/80dad50357.js" crossorigin="anonymous"></script>
 
@@ -48,6 +48,7 @@
     {{-- script --}}
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="{{ asset('js/jquery.js') }}"></script>
     {{-- guitar chordjs --}}
     <script src="{{ asset('js/html-chords.js') }}" defer></script>

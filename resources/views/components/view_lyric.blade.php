@@ -6,6 +6,7 @@
     {{ $song->title }} Chord - {{ $song->summary }}
 @endsection
 @section('content')
+    {{-- @dd($song->meta['canonical_link']) --}}
     <div class="row">
         <div class="col-12 col-md-8">
             {{-- Share Button --}}
@@ -22,14 +23,17 @@
                     {{ $song->summary }}</a>
 
                 <!-- Button trigger modal -->
-                <button type="button" class=" bg-black btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    <i class="fa-solid fa-play"></i> Play
-                </button>
+                @if ($song->meta['canonical_link'] != null)
+                    <button type="button" class=" bg-black btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-play"></i> Play
+                    </button>
+                @endif
             </div>
             <!-- Modal -->
+
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg  modal-dialog-centered">
+                <div class="modal-dialog  modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="exampleModalLabel">{{ $song->title }}</h4>
@@ -38,8 +42,8 @@
                         <div class="modal-body"data-bs-dismiss="modal" aria-label="Close">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item" width="100%" height="450"
-                                    src="https://www.youtube.com/embed/6U0SmLr34Wo" title="{{ $song->title }}"
-                                    frameborder="0" id="songvideo" allowfullscreen></iframe>
+                                    src='https://www.youtube.com/embed/{{ $song->meta['canonical_link'] }}'
+                                    title="{{ $song->title }}" frameborder="0" id="songvideo" allowfullscreen></iframe>
                             </div>
                         </div>
 

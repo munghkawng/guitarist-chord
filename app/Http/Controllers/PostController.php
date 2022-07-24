@@ -19,7 +19,7 @@ class PostController extends Controller
 
     public function show_all_lyrics()
     {
-        $posts = Post::with('tags')->inRandomOrder()->published()->get();
+        $posts = Post::with('tags')->inRandomOrder()->published()->latest();
         
         return view('components.all_lyrics', compact('posts'));
     }
@@ -29,7 +29,7 @@ class PostController extends Controller
         $song = Post::with('tags', 'topic')->firstWhere('slug', $slug);
        
 
-        //dd($song->tags[0]->slug);
+        //dd($song);
         $socialShareButtons = \Share::page(url()->current(), $slug)
             ->facebook()
             ->twitter()
