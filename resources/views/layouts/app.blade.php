@@ -10,11 +10,13 @@
     <meta name="description" content="@yield('meta-description')">
     <meta name="robots" content="index,follow">
     <title>@yield('title') | Guitaristchord.com</title>
+    {{-- recaptch script --}}
+
 
     <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
     @livewireStyles
     {{-- favicon link --}}
-    <link rel=“icon” href="{{ asset('img/favicon.ico') }}" type=“image/x-icon”>
+    <link rel=“icon” sizes="192x192" href="{{ asset('img/favicon.ico') }}" type=“image/x-icon”>
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/apple-touch-icon-57x57.png') }}" />
@@ -79,6 +81,9 @@
 
     @livewireScripts
     @stack('child-scripts')
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </body>
 
