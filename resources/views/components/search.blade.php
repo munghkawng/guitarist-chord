@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         @foreach ($songs as $song)
-            <div class="col-md-3 d-flex justify-content-center">
+            <div class="col-md-3 d-flex justify-content-center mb-3">
 
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
@@ -16,7 +16,8 @@
 
                         <div class="d-grid">
                             <a href="{{ route('lyric.show', $song->slug) }}"
-                                class="btn btn-outline-primary stretched-link"><i class="bi bi-chevron-right"></i>View
+                                class="btn btn-outline-primary stretched-link rounded-pill"><i
+                                    class="bi bi-chevron-right"></i>View
                                 Lyric</a>
                         </div>
 

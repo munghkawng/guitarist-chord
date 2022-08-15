@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SitemapXmlController;
 
 
@@ -55,4 +56,26 @@ Route::get('/disclaminer',function(){
 })->name('disclaminer');
 
 
+// authentication route
+Route::get('/login',function(){
+    return view('components.login');
+});
+
+Route::get('/register',function(){
+    return view('components.register');
+});
+
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
+// COmment Route
+Route::get('/comment',function(){
+    return view('components.comment');
+});
+
+//  Sign in With Google Route
+Route::get('/login/google',[LoginController::class,'redirectToGoogle'])->name('login.google');
+Route::get('/auth/google/callback',[LoginController::class,'handleGoogleCallback']);
+
+// Sign In With Facebook Route
+Route::get('/login/facebook',[LoginController::class,'redirectToFacebook'])->name('login.facebook');
 

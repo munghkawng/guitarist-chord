@@ -8,16 +8,13 @@
     Myanmar Song Chords | Guitarist Chord
 @endsection
 @section('content')
-    <div class="row row-cols-2 row-cols-md-3 g-4">
+    <div class="row">
         @foreach ($artists as $artist)
-            <div class="col">
-                <div class="card text-center bg-white border-0 font-weight-bolder">
+            <div class="col-md-3 text-center mb-3">
+                <a href="{{ route('show.song', $artist->slug) }}"
+                    class="btn btn-primary btn-lg rounded-pill">{{ $artist->name }}</a>
 
-                    <div class="card-body bg-primary text-dark">
-                        <a href="{{ route('show.song', $artist->slug) }}"
-                            class="text-decoration-none text-white   text-primary stretched-link text-uppercase">{{ $artist->name }}</a>
-                    </div>
-                </div>
+
             </div>
         @endforeach
 

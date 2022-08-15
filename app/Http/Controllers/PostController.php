@@ -2,24 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use Canvas\Events\PostViewed;
+use Share;
+use Canvas\Models\Post;
 
 use Illuminate\Http\Request;
-use Canvas\Models\Post;
+use Canvas\Events\PostViewed;
 
 
 class PostController extends Controller
 {
+   
+    
     public function index()
     {
-        // $posts = Post::with('tags')->published()->paginate(16);
+        $posts = Post::with('tags')->published()->paginate(16);
 
-        return view('components.index');
+        return view('components.index',compact('posts'));
     }
 
     public function show_all_lyrics()
     {
         $posts = Post::with('tags')->inRandomOrder()->published()->latest();
+      
+       
+
         
         return view('components.all_lyrics', compact('posts'));
     }
@@ -27,10 +33,12 @@ class PostController extends Controller
     public function show($slug)
     {
         $song = Post::with('tags', 'topic')->firstWhere('slug', $slug);
+        ;
+       
        
 
         //dd($song);
-        $socialShareButtons = \Share::page(url()->current(), $slug)
+        $socialShareButtons = Share::page(url()->current(), $slug)
             ->facebook()
             ->twitter()
             ->reddit()

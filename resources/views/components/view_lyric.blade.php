@@ -19,12 +19,12 @@
 
             <h4 class="fw-bold mb-3">{{ $song->title }}</h4>
             <div class="mb-3">
-                <a href="{{ route('show.song', $song->tags[0]->slug) }}" class="bg-black text-white p-2">
+                <a href="{{ route('show.song', $song->tags[0]->slug) }}" class="bg-black text-white p-2 rounded">
                     {{ $song->summary }}</a>
 
                 <!-- Button trigger modal -->
                 @if ($song->meta['canonical_link'] != null)
-                    <button type="button" class=" bg-black btn btn-primary" data-bs-toggle="modal"
+                    <button type="button" class=" bg-black btn btn-primary rounded-pill" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                         <i class="fa-solid fa-play"></i> Play
                     </button>
@@ -53,13 +53,14 @@
 
 
             <div class="song">
-
                 <div class="transposition">
 
-                </div>
-                {!! $song->body !!}
 
+                </div>
+
+                {!! $song->body !!}
             </div>
+
         </div>
         <div class="col-md-4">
             <p class="lead text-center text-info text-uppercase">Related Songs</p>

@@ -14,7 +14,7 @@
 
 
     <meta name="keywords" content="guitaristchord.com,guitaristchord,myanmar songs chords,kachin songs chords">
-    @livewireStyles
+
     {{-- favicon link --}}
     <link rel=“icon” sizes="192x192" href="{{ asset('img/favicon.ico') }}" type=“image/x-icon”>
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon" />
@@ -79,7 +79,7 @@
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/share.js') }}"></script>
 
-    @livewireScripts
+
     @stack('child-scripts')
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>

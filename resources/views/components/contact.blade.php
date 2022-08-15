@@ -17,7 +17,7 @@
                         <div class="mb-3">
                             <label for="fullName" class="form-label">FullName<span class="text-danger">
                                     *</span></label>
-                            <input type="text" class="form-control @error('fullName') is-invalid @enderror "
+                            <input type="text" class="form-control shadow-none @error('fullName') is-invalid @enderror "
                                 id="fullName" name="fullName">
                             @error('fullName')
                                 <span class="invalid-feedback" role="alert">
@@ -28,8 +28,8 @@
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subject <span class="text-danger">
                                     *</span></label>
-                            <input type="text" class="form-control @error('subject') is-invalid @enderror" id="subject"
-                                name="subject">
+                            <input type="text" class="form-control shadow-none @error('subject') is-invalid @enderror"
+                                id="subject" name="subject">
                             @error('subject')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -39,8 +39,8 @@
                         <div class="mb-3">
                             <label for="message" class="form-label">Message<span class="text-danger">
                                     *</span></label>
-                            <textarea class="form-control @error('message') is-invalid @enderror" id="message" rows="10" name="message"
-                                placeholder="drop message"></textarea>
+                            <textarea class="form-control shadow-none @error('message') is-invalid @enderror" id="message" rows="10"
+                                name="message" placeholder="drop message"></textarea>
                             @error('message')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -51,7 +51,8 @@
                         <div class="mb-3">
                             <label for="uploaderEmailAddress" class="form-label">Email<span class="text-danger">
                                     *</span></label>
-                            <input type="email" class="form-control @error('uploaderEmail') is-invalid @enderror"
+                            <input type="email"
+                                class="form-control shadow-none @error('uploaderEmail') is-invalid @enderror"
                                 id="uploaderEmailAddress" name="uploaderEmail" placeholder="Enter Your Email">
                             @error('uploaderEmail')
                                 <span class="invalid-feedback" role="alert">
